@@ -77,50 +77,143 @@
 
 // EXO3
 
-class objet {
-    constructor(nom, prix) {
-        this.nom = nom;
-        this.prix = prix;
-    }
-}
+// class objet {
+//     constructor(nom, prix) {
+//         this.nom = nom;
+//         this.prix = prix;
+//     }
+// }
 
-let stylo = new objet("stylo", 5)
-let bic = new objet("bic", 3)
+// let stylo = new objet("stylo", 500)
+// let bic = new objet("bic", 300)
 
-let boite = [bic, stylo]
+// let boite = [bic, stylo]
 
-class personnage {
-    constructor(nom, sac, argent) {
-        this.nom = nom;
-        this.sac = sac;
-        this.argent = argent;
-    }
+// class personnage {
+//     constructor(nom, sac, argent) {
+//         this.nom = nom;
+//         this.sac = sac;
+//         this.argent = argent;
+//     }
 
-    prendre(objet) {
-        this.sac.push(objet);
-        //console.log(this.sac);
-    }
+   // prendre(objet) {
+        //this.sac.push(objet); ma ligne
 
-    acheter(vendeur, objet) {
-        if (this.argent >= objet.prix) {
-            this.sac.push(objet);
-            this.argent -= objet.prix;
-            vendeur.argent += objet.prix;
-        } else {
-            console.log(`${this.nom} n'a pas assez d'argent pour acheter ${objet.nom}.`);
-        }
+    //     this.sac.push(objet)
+    //     this.argent -= objet.prix;
+    // }
 
-    }
+   // acheter(vendeur, objet) {
+        // if (this.argent >= objet.prix) {                                                                 {mes lignes}
+        //     this.sac.push(objet);
+        //     this.argent -= objet.prix;
+        //     vendeur.argent += objet.prix;
+        // } else {
+        //     console.log(`${this.nom} n'a pas assez d'argent pour acheter ${objet.nom}.`);
+        // }
+       // this.sac.push(vendeur.sac);                      lignes prof
+        //this.argent -= objet.prix;
+    //}
 
-   // console.log(`j'achete un ${boite} a ${vendeur}`);
-}
 
-let Shahin = new personnage("Shahin", [], 4000)
-let vendeur = new personnage("vendeur", [], 1000)
+//}
 
-Shahin.prendre(boite[0])
-vendeur.prendre(boite[1])
-console.log(vendeur.sac);
+// let Shahin = new personnage("Shahin", [], 4000)             mes lignes
+// let vendeur = new personnage("vendeur", [], 1000)
 
-Shahin.acheter(vendeur,stylo)
-console.log(Shahin.sac);
+// Shahin.prendre(boite[0])
+// vendeur.prendre(boite[1])
+// console.log(vendeur.sac);
+
+// Shahin.acheter(vendeur,stylo)
+// console.log(Shahin.sac);
+
+// Shahin.prendre(bic);                              lignes caoch
+// vendeur.prendre(stylo);               
+
+// console.log('Shahin');
+// console.log(Shahin.sac);
+// console.log(Shahin.argent);
+
+// console.log('vendeur');
+// console.log(vendeur.sac);
+// console.log(vendeur.argent);
+
+// Shahin.acheter(vendeur, stylo);
+// console.log('apres achat');
+
+
+
+
+//EXO 05/01/23
+
+// class lieu {
+//     constructor(nom, personnes){
+//         this.nom = nom;
+//         this.personnes = personnes;
+//     }
+// }
+
+// let molengeek = new lieu ("Molengeek",[])
+// let snack = new lieu ("Snack",[])
+// let maison = new lieu ("Maison",[])
+
+
+// class Personne {
+//     constructor(nom, prenom, argent){
+//         this.nom = nom;
+//         this.prenom = prenom;
+//         this.argent = argent;
+//     }
+
+//     seDeplacer(lieu, bus){
+//             bus.embarquer(this);
+//             lieu.personnes.push(this);
+//             bus.personne.splice(bus.personne.indexOf(this),1);
+//     }
+// }
+
+// let shahin = new Personne("alemzadeh", "shahin", 200)
+
+// class Bus {
+//     constructor(personne, caisse){
+//         this.personne = personne;
+//         this.caisse = caisse;
+        
+//     }
+
+//     embarquer(Shahin){
+//             if (Shahin.argent >= prixBus) {
+
+                
+//                 Shahin.argent -= prixBus;
+//                 this.caisse += prixBus;
+//                 this.personne.push(Shahin);
+                
+//             } 
+//             else {
+//                 console.log(`${Shahin} n'a pas assez d'argent.`)
+//             }
+//     }
+// }
+
+// let bus = new Bus([], 0)
+// let prixBus = 2.80
+
+// shahin.seDeplacer(molengeek,bus)
+// console.log(shahin.argent);
+// console.log(bus.caisse);
+// console.log(molengeek);
+
+// shahin.seDeplacer(snack, bus)
+// console.log(snack);
+
+// molengeek.personnes.push(shahin)
+
+// snack.personnes.splice(snack.personnes.indexOf(shahin),1);
+// console.log(molengeek);
+// shahin.seDeplacer(maison,bus);
+// console.log(maison);
+// console.log(bus.caisse.toFixed(2));
+
+
